@@ -5,7 +5,7 @@ import Routes from "./Routes";
 import AppContext from "./context/AppContext";
 import { useState } from "react";
 import MobileMenuSidebar from "./Components/menubar/MobileMenuSidebar";
-import Login from "./Pages/Login";
+
 import useFetch from "./Hooks/useFetch";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from "react-toastify";
@@ -33,20 +33,20 @@ function App() {
       className: "w-[26rem]",
     });
 
-  const [datasArray] = useFetch("http://localhost:8000/api/admins/");
+  // const [datasArray] = useFetch("http://localhost:8000/api/admins/");
 
-  const isLoginHandler = (username, password) => {
-    datasArray.map((data) => {
-      if (data.username === username && data.password === password) {
-        setIsLogin(true);
-        setFnameAdmin(data.firstname);
-        setLnameAdmin(data.lastname);
-        setTaskAdmin(data.task);
-        setProfileImgAdmin(data.img);
-        successToast("ورود موفقیت آمیز بود");
-      } else setIsErrorLog(true)
-    });
-  };
+  // const isLoginHandler = (username, password) => {
+  //   datasArray.map((data) => {
+  //     if (data.username === username && data.password === password) {
+  //       setIsLogin(true);
+  //       setFnameAdmin(data.firstname);
+  //       setLnameAdmin(data.lastname);
+  //       setTaskAdmin(data.task);
+  //       setProfileImgAdmin(data.img);
+  //       successToast("ورود موفقیت آمیز بود");
+  //     } else setIsErrorLog(true)
+  //   });
+  // };
   return (
     <div className={isDarkTheme ? "App dark" : "App"}>
       <ToastContainer
@@ -70,7 +70,7 @@ function App() {
           setIsLogin,
         }}
       >
-        {isLogin ? (
+      
           <div>
             {isMobileSidebar && <MobileMenuSidebar />}
             <div dir="rtl">
@@ -88,9 +88,7 @@ function App() {
               </div>
             </div>
           </div>
-        ) : (
-          <Login onLogin={isLoginHandler} eror={isErrorLog} erorhandler={setIsErrorLog}/>
-        )}
+       
       </AppContext.Provider>
     </div>
   );
