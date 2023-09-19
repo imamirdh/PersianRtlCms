@@ -5,10 +5,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        "Vazir":"Vazir",
-        "VazirMedium":"VazirMedium",
-        "VazirLight":"VazirLight",
-        "VazirBold":"VazirBold"
+        "Dana":"Dana",
+        "DanaMedium":"Dana Medium",
+        "DanaDemiBold":"Dana DemiBold",
+        "Morabba":"Morabba Light",
+        "MorabbaMedium":"Morabba Medium",
+        "MorabbaBold":"Morabba Bold"
       },
     },
   },
