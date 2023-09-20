@@ -70,24 +70,23 @@ function App() {
           setIsLogin,
         }}
       >
-        {/* <div>
-            {isMobileSidebar && <MobileMenuSidebar />}
-          <div className="font-Vazir flex h-screen bg-slate-50 dark:bg-slate-700"> */}
-        <div dir="rtl">
-          <Sidebar exit={setIsLogin} />
-        </div>
-        {/* <div className="w-full lg:w-5/6">
-                  <Navbar
-                    name={fnameAdmin}
-                    lastname={lnameAdmin}
-                    task={taskAdmin}
-                    img={profileImgAdmin}
-                  />
-                  <div className=" h-[90%] overflow-y-auto">{route}</div>
-                </div>
+        <div>
+          {isMobileSidebar && <MobileMenuSidebar />}
+          <div dir="rtl">
+            <div className="font-Vazir flex h-screen bg-slate-50 dark:bg-zinc-800">
+              <Sidebar exit={setIsLogin} />
+              <div className="w-full lg:w-5/6">
+                <Navbar
+                  // name={fnameAdmin}
+                  // lastname={lnameAdmin}
+                  // task={taskAdmin}
+                  // img={profileImgAdmin}
+                />
+                <div className=" h-[90%] overflow-y-auto">{route}</div>
               </div>
             </div>
-          </div> */}
+          </div>
+        </div>
       </AppContext.Provider>
     </div>
   );
