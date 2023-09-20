@@ -1,18 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode:"class",
+  darkMode: "class",
   theme: {
     extend: {
-      fontFamily:{
-        "Dana":"Dana",
-        "DanaMedium":"Dana Medium",
-        "DanaDemiBold":"Dana DemiBold",
-        "Morabba":"Morabba Light",
-        "MorabbaMedium":"Morabba Medium",
-        "MorabbaBold":"Morabba Bold"
+      fontFamily: {
+        Dana: "Dana",
+        DanaMedium: "Dana Medium",
+        DanaDemiBold: "Dana DemiBold",
+        Morabba: "Morabba Light",
+        MorabbaMedium: "Morabba Medium",
+        MorabbaBold: "Morabba Bold",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
+  ],
 };

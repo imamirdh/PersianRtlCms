@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Table(props) {
-  console.log(props);
   return (
     <>
       <table className="lg:w-full w-[900px] overflow-hidden rounded-xl text-center font-Dana">
