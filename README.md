@@ -12,11 +12,11 @@ Welcome to the `Persian site management dashboard` project. I am `Amirreza Dehna
 
 ## 💻 Project View
 
-![App Screenshot](http://linklick.ir/a/l/0bad39cf8be01afd807cc6512ae89bd2/ezgif.com-video-to-gif.gif)
+![App Screenshot]([http://linklick.ir/a/l/0bad39cf8be01afd807cc6512ae89bd2/ezgif.com-video-to-gif.gif](http://linklick.ir/a/l/0bad39cf8be01afd807cc6512ae89bd2/پنل-ادمین-Google-Chrome-1402-07-01-12-38-30-_online-video-cutter.com_.gif))
 
 ## 🚀 About Me
 
-Hello, my name is Amirreza Dehnamaki and I work in the field of front-end programming, so far I am proficient in designing HTML templates, Tailwind framework, CSS, JavaScript, React and Next. But this is not the end and I will reach higher positions
+Hello, my name is Amirreza Dehnamaki and I work in the field of front-end programming, so far I am proficient in designing HTML templates, Tailwind framework, CSS, JavaScript, React Js and Next Js. But this is not the end and I will reach higher positions
 
 ## Now in Cms...
 
