@@ -12,7 +12,7 @@ Welcome to the `Persian site management dashboard` project. I am `Amirreza Dehna
 
 ## 💻 Project View
 
-![App Screenshot]([http://linklick.ir/a/l/0bad39cf8be01afd807cc6512ae89bd2/ezgif.com-video-to-gif.gif](http://linklick.ir/a/l/0bad39cf8be01afd807cc6512ae89bd2/پنل-ادمین-Google-Chrome-1402-07-01-12-38-30-_online-video-cutter.com_.gif))
+![App Screenshot](https://linklick.ir/a/l/0bad39cf8be01afd807cc6512ae89bd2/%D9%BE%D9%86%D9%84-%D8%A7%D8%AF%D9%85%DB%8C%D9%86-Google-Chrome-1402-07-01-12-38-30-_online-video-cutter.com_.gif)
 
 ## 🚀 About Me
 
