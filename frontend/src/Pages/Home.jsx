@@ -3,7 +3,7 @@ import Feature from "../Components/Home/CountBox";
 import { BiShoppingBag } from "react-icons/bi";
 import { FiUsers } from "react-icons/fi";
 import Chart from "./../Components/Home/Chart";
-import { Card, Typography } from "@material-tailwind/react";
+
 import Table from "../Components/Table/Table";
 function Home(props) {
   return (

@@ -9,7 +9,7 @@ export default function Table(props) {
             <td>{td}</td>
           ))}
         </thead>
-        <tbody className="[&>*:nth-child(even)]:bg-zinc-100 child:h-14 dark:child:bg-zinc-600 dark:[&>*:nth-child(even)]:bg-zinc-500 dark:[&>*:nth-child(even)]:bg-opacity-70 dark:child:text-gray-300">
+        <tbody className="[&>*:nth-child(even)]:bg-zinc-100 child:h-14 dark:child:bg-zinc-600 dark:[&>*:nth-child(even)]:bg-zinc-500 dark:[&>*:nth-child(even)]:bg-opacity-70 dark:child:text-gray-100">
           {props.children}
         </tbody>
       </table>
