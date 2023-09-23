@@ -2,35 +2,71 @@ import React from "react";
 import CommentBox from "../Components/Comments/CommentBox";
 import useFetch from "../Hooks/useFetch";
 import { ToastContainer } from "react-toastify";
-
+import Table from "../Components/Table/Table";
+import Button from "../Components/Input/Button";
+import {
+  HiOutlineEye,
+  HiOutlineCheck,
+  HiOutlineChat,
+  HiOutlineTrash,
+  HiOutlinePencil,
+  HiOutlineLockClosed,
+} from "react-icons/hi";
 function Comments() {
-  const [comentsdata, deleteItemFromcomentDatas, updateItemFromcomentDatas] =
-    useFetch("http://localhost:8000/api/comments/");
   return (
-    <div>
-      <ToastContainer
-        position="top-center"
-        autoClose={2500}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
-      <h1 className="overflow-auto text-2xl font-VazirBold text-center dark:text-white my-4 py-2 border-b-2">
-        جدید ترین نظرات
-      </h1>
-      {comentsdata.map((coment) => (
-        <CommentBox
-          coment={coment}
-          updateItemFromcomentDatas={updateItemFromcomentDatas}
-          deleteItemFromcomentDatas={deleteItemFromcomentDatas}
-        />
-      ))}
-    </div>
+    <>
+      <div className="p-2">
+        <p className="font-MorabbaBold text-xl dark:text-orange-200 text-gray-700 border-b dark:border-zinc-300 border-orange-300  py-2 my-2">
+          کامنت های کاربران
+        </p>
+        <Table
+          th={[
+            "شناسه",
+            "کاربر",
+            "محصول",
+            "مشاهده",
+            "تایید یا رد",
+            "پاسخ",
+            "کنترل",
+          ]}
+        >
+          <tr>
+            <td>8585</td>
+            <td>امیررضا</td>
+            <td>قهوه ترک</td>
+            <td>
+              <Button className="group border-2 border-zinc-400 p-2 rounded-md hover:border-orange-300 transition-all">
+                <HiOutlineEye className="text-zinc-500 text-lg hover:text-orange-300 group-hover:text-orange-300 dark:text-zinc-300" />
+              </Button>
+            </td>
+            <td>
+              <Button className="group border-2 border-zinc-400 p-2 rounded-md hover:border-teal-500 transition-all">
+                <HiOutlineCheck className="text-zinc-500 text-lg hover:text-orange-300 group-hover:text-teal-500 dark:text-zinc-300" />
+              </Button>
+            </td>
+            <td>
+              <Button className="group border-2 border-zinc-400 p-2 rounded-md hover:border-orange-300 transition-all">
+                <HiOutlineChat className="text-zinc-500 text-lg hover:text-orange-300 group-hover:text-orange-300 dark:text-zinc-300" />
+              </Button>
+            </td>
+            <td>
+              <Button className="group relative border-2 border-zinc-400 p-2 rounded-md hover:border-rose-500 transition-all">
+                <HiOutlineTrash className="text-zinc-500 text-lg hover:text-orange-300 group-hover:text-rose-500 dark:text-zinc-300" />
+                <span className="absolute -top-full -right-full hidden bg-white p-1 text-sm rounded-lg border border-zinc-500 group-hover:block dark:bg-zinc-700 ">حذف</span>
+              </Button>
+              <Button className="group relative border-2 border-zinc-400 p-2 rounded-md hover:border-yellow-500 transition-all">
+                <HiOutlinePencil className="text-zinc-500 text-lg hover:text-orange-300 group-hover:text-yellow-500 dark:text-zinc-300" />
+                <span className="absolute -top-full -right-full hidden bg-white p-1 text-sm rounded-lg border border-zinc-500 group-hover:block dark:bg-zinc-700 ">ویرایش</span>
+              </Button>
+              <Button className="group relative border-2 border-zinc-400 p-2 rounded-md hover:border-rose-500 transition-all">
+                <HiOutlineLockClosed className="text-zinc-500 text-lg  group-hover:text-rose-500 dark:text-zinc-300" />
+                <span className="w-28 absolute -top-full -right-full hidden bg-white p-1 text-sm rounded-lg border border-zinc-500 group-hover:block dark:bg-zinc-700 ">بن کردن کاربر</span>
+              </Button>
+            </td>
+          </tr>
+        </Table>
+      </div>
+    </>
   );
 }
 

@@ -9,6 +9,11 @@ import {
 import Button from "../Components/Input/Button";
 import Table from "../Components/Table/Table";
 import { MdOutlineAddShoppingCart, MdViewList } from "react-icons/md";
+import {
+  HiOutlineTrash,
+  HiOutlinePencil,
+  HiOutlineEye,
+} from "react-icons/hi";
 function Products(props) {
   const [pageHandle, setPageHanler] = useState("list");
   const [formstate, onInputHandler] = useForm(
@@ -64,7 +69,7 @@ function Products(props) {
             لیست محصولات 
           </p>
           <Table
-            th={["عنوان", "لینک", "قیمت", " دسته بندی", "تاریخ  اضافه کردن"]}
+            th={["عنوان", "لینک", "قیمت", " دسته بندی", "تاریخ  اضافه کردن","کنترل"]}
           >
             <tr>
               <td>امیررضا</td>
@@ -72,28 +77,23 @@ function Products(props) {
               <td>imamirdh@gmail.com</td>
               <td>091212345678</td>
               <td></td>
+              <td>
+              <Button className="group relative border-2 border-zinc-400 p-2 rounded-md hover:border-rose-500 transition-all">
+                <HiOutlineTrash className="text-zinc-500 text-lg hover:text-orange-300 group-hover:text-rose-500 dark:text-zinc-300" />
+                <span className="absolute -top-full -right-full hidden bg-white p-1 text-sm rounded-lg border border-zinc-500 group-hover:block dark:bg-zinc-700 ">حذف</span>
+              </Button>
+              <Button className="group relative border-2 border-zinc-400 p-2 rounded-md hover:border-yellow-500 transition-all">
+                <HiOutlinePencil className="text-zinc-500 text-lg hover:text-orange-300 group-hover:text-yellow-500 dark:text-zinc-300" />
+                <span className="absolute -top-full -right-full hidden bg-white p-1 text-sm rounded-lg border border-zinc-500 group-hover:block dark:bg-zinc-700 ">ویرایش</span>
+              </Button>
+             <Button className="group relative border-2 border-zinc-400 p-2 rounded-md hover:border-orange-300 transition-all">
+                <HiOutlineEye className="text-zinc-500 text-lg hover:text-orange-300 group-hover:text-orange-300 dark:text-zinc-300" />
+                <span className="absolute -top-full -right-full hidden bg-white p-1 text-sm rounded-lg border border-zinc-500 group-hover:block dark:bg-zinc-700 ">مشاهده</span>
+              </Button>
+              
+            </td>
             </tr>
-            <tr>
-              <td>امیررضا</td>
-              <td>imamirdh</td>
-              <td>imamirdh@gmail.com</td>
-              <td>091212345678</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>امیررضا</td>
-              <td>imamirdh</td>
-              <td>imamirdh@gmail.com</td>
-              <td>091212345678</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>امیررضا</td>
-              <td>imamirdh</td>
-              <td>imamirdh@gmail.com</td>
-              <td>091212345678</td>
-              <td></td>
-            </tr>
+           
           </Table>
         </div>
       )}
