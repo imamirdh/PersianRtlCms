@@ -10,6 +10,7 @@ import {
   BiMoon,
   BiSun,
 } from "react-icons/bi";
+import {HiOutlineDocumentText} from "react-icons/hi"
 import { FiUsers, FiShoppingCart } from "react-icons/fi";
 import SidebarItem from "./SidebarItem";
 import { useContext } from "react";
@@ -44,23 +45,27 @@ function Sidebar({ exit }) {
       </div>
       <div class="mb-2 bg-zinc-500 h-[1px]"></div>
 
-     
       <SidebarItem title="صفحه اصلی" toroute="/" icon={<BiHomeAlt2 />} />
       <SidebarItem
         title="محصولات"
         toroute="/Products"
         icon={<BiShoppingBag />}
       />
+      <SidebarItem title="کاربران" toroute="/Users" icon={<FiUsers />} />
       <SidebarItem
         title="کامنت ها"
         toroute="/Comments"
         icon={<BiCommentDetail />}
       />
-      <SidebarItem title="کاربران" toroute="/Users" icon={<FiUsers />} />
       <SidebarItem
         title="سفارشات"
         toroute="/Orders"
         icon={<FiShoppingCart />}
+      />
+       <SidebarItem
+        title="مقاله ها"
+        toroute="/Articles"
+        icon={<HiOutlineDocumentText />}
       />
       <SidebarItem
         title="تخفیف ها"
