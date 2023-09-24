@@ -1,5 +1,5 @@
 import Home from "./Pages/Home";
-// import Discount from "./Pages/Discounts";
+import Category from "./Pages/Category";
 import Users from "./Pages/Users";
 import Orders from "./Pages/Orders";
 import Products from "./Pages/Products";
@@ -12,7 +12,7 @@ let routes=[
     {path:"/Users",element:<Users/>},
     {path:"/Orders",element:<Orders/>},
     {path:"/Articles",element:<Articles/>},
-    // {path:"/Discount",element:<Discount/>},
+    {path:"/Category",element:<Category/>},
 ]
 
 export default routes;

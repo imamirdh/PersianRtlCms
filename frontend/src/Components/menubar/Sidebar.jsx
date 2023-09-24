@@ -1,7 +1,7 @@
 import React from "react";
 import {
   BiSolidDashboard,
-  BiSearch,
+  BiCategory,
   BiHomeAlt2,
   BiShoppingBag,
   BiCommentDetail,
@@ -66,6 +66,11 @@ function Sidebar({ exit }) {
         title="مقاله ها"
         toroute="/Articles"
         icon={<HiOutlineDocumentText />}
+      />
+       <SidebarItem
+        title="دسته بندی ها"
+        toroute="/Category"
+        icon={<BiCategory />}
       />
       <SidebarItem
         title="تخفیف ها"

@@ -10,7 +10,7 @@ import { MdOutlineAddShoppingCart, MdViewList } from "react-icons/md";
 import { HiOutlineTrash, HiOutlinePencil, HiOutlineEye } from "react-icons/hi";
 import { useForm } from "../Hooks/useForm";
 import { useState } from "react";
-function Products(props) {
+function Articles(props) {
   const [pageHandle, setPageHanler] = useState("list");
   const [formstate, onInputHandler] = useForm(
     {
@@ -201,4 +201,4 @@ function Products(props) {
   );
 }
 
-export default Products;
+export default Articles;
