@@ -10,7 +10,7 @@ import {
   BiMoon,
   BiSun,
 } from "react-icons/bi";
-import {HiOutlineDocumentText} from "react-icons/hi"
+import {HiOutlineDocumentText , HiOutlineMail , HiMenu} from "react-icons/hi"
 import { FiUsers, FiShoppingCart } from "react-icons/fi";
 import SidebarItem from "./SidebarItem";
 import { useContext } from "react";
@@ -71,6 +71,16 @@ function Sidebar({ exit }) {
         title="دسته بندی ها"
         toroute="/Category"
         icon={<BiCategory />}
+      />
+       <SidebarItem
+        title="منو ها"
+        toroute="/Menus"
+        icon={<HiMenu />}
+      />
+       <SidebarItem
+        title="پیغام ها"
+        toroute="/Message"
+        icon={<HiOutlineMail />}
       />
       <SidebarItem
         title="تخفیف ها"
